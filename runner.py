@@ -1,4 +1,4 @@
-from functions.print_menu import print_menu
+from functions.print_menu import *
 
 def main():
     print_menu()

@@ -11,7 +11,7 @@ def subtract(a, b):
 
 def divide(a, b):
     if b == 0:
-        return "Помилка: ділення на нуль"
+        return "Помилка: ділення на нуль."
     return a / b
 
 def find_sqrt(a):
@@ -22,4 +22,3 @@ def find_remainder(a, b):
 
 def to_power(a, b):
     return pow(a, b)
-

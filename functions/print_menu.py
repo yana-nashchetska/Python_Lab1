@@ -1,22 +1,13 @@
-from functions import toggle_extended
-from functions import calc_result
-from functions import calculate
-from functions import get_operator
-from functions import open_settings
-from functions import operations_functions
-from functions import print_menu
-from functions import show_history
-from constants.GlobalVariables import extended
+from functions.calculate import calculate
+from functions.open_settings import open_settings
+from functions.show_history import show_history
 
 def print_menu():
-    global extended  # Додаємо global для доступу до змінної extended
     while True:
         print('1. Обчислити')
         print('2. Історія')
         print('3. Налаштування')
-        print('4. Додаткові операції')
-        print('5. Вийти')
-
+        print('4. Вийти')
 
         answer = input()
 
@@ -28,13 +19,6 @@ def print_menu():
             case '3':
                 open_settings()
             case '4':
-                # change_extended()  # Змінюємо режим
-                # print(f"extended після зміни: {extended}")  # Перевіряємо extended
-                # # Викликаємо calculate з урахуванням нового значення extended
-                # calculate()
-                toggle_extended.toggle_extended()  # Змінюємо режим
-                print(extended)
-            case '5':
                 break
             case _:
                 print('Такого варіанта меню не існує.')

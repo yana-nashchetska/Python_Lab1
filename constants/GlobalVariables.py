@@ -1,14 +1,10 @@
 from enum import Enum
 
-class MainButton(Enum):
+class Button(Enum):
     ADDITION = '+'
     SUBTRACTION = '-'
     MULTIPLICATION = '*'
     DIVISION = '/'
-
-class AdditionalButton(Enum):
     SQRT = 'sqrt'
     REMAINDER = '%'
     POWER = '^'
-
-extended = 1
