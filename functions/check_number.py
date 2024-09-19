@@ -1,10 +1,4 @@
 def check_number(num):
-    if isinstance(num, str) and num.isnumeric():
-        num = float(num)
-    else:
+    while not num.isnumeric():
         num = input('Помилка. Введіть число: ')
-
-        return check_number(num)
-
-    return num
-
+    return float(num)
