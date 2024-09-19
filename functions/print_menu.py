@@ -3,7 +3,7 @@ from functions.calculate import calculate
 from functions.open_settings import open_settings
 from functions.show_history import show_history
 from functions.memory import memory_clear, memory_recall, memory_store, memory_add
-from AppSettings import set_decimal, get_decimal, get_console_color
+from AppSettings import get_console_color
 
 def print_menu():
     while True:
