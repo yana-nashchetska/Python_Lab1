@@ -21,4 +21,4 @@ def find_remainder(a, b):
     return a % b
 
 def to_power(a, b):
-    return pow(a, b)
+    return a ** b

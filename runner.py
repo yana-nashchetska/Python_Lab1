@@ -1,7 +1,4 @@
-from functions.print_menu import *
-
-def main():
-    print_menu()
+from functions.main import main
 
 if __name__ == "__main__":
     main()
