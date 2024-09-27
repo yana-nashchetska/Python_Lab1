@@ -1,6 +1,6 @@
-from AppSettings import set_decimal, set_console_color
+from app_settings import set_decimal, set_console_color
 
-def open_settings():
+def output_settings():
     while True:
         print('1. Змінити кількість знаків після коми')
         print('2. Змінити колір тексту')
