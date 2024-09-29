@@ -1,4 +1,5 @@
-from functions.print_menu import *
+from classes.CalculatorConsole import CalculatorConsole
 
 def main():
-    print_menu()
+    console = CalculatorConsole()
+    console.run_console()
