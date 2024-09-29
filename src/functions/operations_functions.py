@@ -14,9 +14,6 @@ def subtract(a, b):
 
 
 def divide(a, b):
-    # if b == 0:
-    #     raise ZeroDivisionError("Помилка: Ділення на нуль!")
-    # return a / b
     try:
         return a / b
     except ZeroDivisionError:

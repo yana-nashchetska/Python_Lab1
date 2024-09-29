@@ -3,7 +3,7 @@ from classes.ConsoleReader import ConsoleReader
 from classes.Calculator import Calculator
 from classes.ConsoleWriter import ConsoleWriter
 from constants.global_variables import main_menu, memory_menu, settings_menu
-from functions.new_functions.menu_functions import print_menu
+from functions.menu_functions import print_menu
 
 
 class CalculatorConsole:
@@ -49,9 +49,6 @@ class CalculatorConsole:
                 case 5:
                     self.handle_memory_menu()
 
-                # case 6:
-
-                #     break
                 case _:
                     self.consoleWriter.output_value(
                         answer, "Такого варіанта в меню немає"

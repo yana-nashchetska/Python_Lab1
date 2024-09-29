@@ -1,5 +1,5 @@
-from functions.new_functions.read_from_input import read_from_input
-from functions.new_functions.validation_functions import check_color, check_number, check_operator
+from functions.handle_input import read_from_input
+from functions.validation_functions import check_color, check_number, check_operator
 
 class ConsoleReader:
     def read_value(self, message=""):

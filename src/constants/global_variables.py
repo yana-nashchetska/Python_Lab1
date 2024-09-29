@@ -1,5 +1,5 @@
 from enum import Enum
-from functions.new_functions.operations_functions import (
+from functions.operations_functions import (
     add,
     subtract,
     multiply,
