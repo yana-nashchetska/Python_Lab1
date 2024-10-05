@@ -1,4 +1,4 @@
-from functions.main import main
+from BLL.main import main
 
 if __name__ == "__main__":
     main()

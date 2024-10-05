@@ -1,9 +1,9 @@
-import app_settings
-from classes.ConsoleReader import ConsoleReader
-from classes.Calculator import Calculator
-from classes.ConsoleWriter import ConsoleWriter
-from constants.global_variables import main_menu, memory_menu, settings_menu
-from functions.menu_functions import print_menu
+import BLL.manage_app_settings as manage_app_settings
+from shared.classes.ConsoleReader import ConsoleReader
+from shared.classes.Calculator import Calculator
+from shared.classes.ConsoleWriter import ConsoleWriter
+from shared.constants.global_variables import main_menu, memory_menu, settings_menu
+from UI.menu_functions import print_menu
 
 
 class CalculatorConsole:
@@ -15,7 +15,7 @@ class CalculatorConsole:
     def run_console(self):
 
         while True:
-            print_menu(app_settings.console_color, main_menu)
+            print_menu(manage_app_settings.console_color, main_menu)
             answer = self.consoleReader.input_data("Оберіть варіант меню")
 
             match answer:
@@ -52,14 +52,14 @@ class CalculatorConsole:
         param_2 = self.consoleReader.input_data("Введть друге число")
 
         result = self.calculator.calc(param_1, operator, param_2)
-        result = round(result, int(app_settings.decimal_places))
+        result = round(result, int(manage_app_settings.decimal_places))
 
         self.calculator.current_value = result
         self.calculator.add_to_history(param_1, operator, param_2, result)
 
     def handle_settings_menu(self):
         while True:
-            print_menu(app_settings.console_color, settings_menu)
+            print_menu(manage_app_settings.console_color, settings_menu)
             option = self.consoleReader.input_data("Оберіть варіант меню")
             match option:
                 case 1:
@@ -67,15 +67,15 @@ class CalculatorConsole:
                         "Введіть нову кількість знаків після коми"
                     )
 
-                    app_settings.set_decimal(new_decimal)
+                    manage_app_settings.set_decimal(new_decimal)
                     self.consoleWriter.output_value(
-                        app_settings.decimal_places,
+                        manage_app_settings.decimal_places,
                         "Кількість знаків після коми змінено на",
                     )
 
                 case 2:
                     self.consoleWriter.output_value(
-                        app_settings.console_color, "Поточний колір консолі"
+                        manage_app_settings.console_color, "Поточний колір консолі"
                     )
                     new_color = self.consoleReader.input_data(
                         """Введіть новий колір.
@@ -84,9 +84,9 @@ class CalculatorConsole:
                         """,
                         "color",
                     )
-                    app_settings.set_console_color(new_color)
+                    manage_app_settings.set_console_color(new_color)
                     self.consoleWriter.output_value(
-                        app_settings.console_color, "Колір консолі змінено на"
+                        manage_app_settings.console_color, "Колір консолі змінено на"
                     )
 
                 case 3:
@@ -99,7 +99,7 @@ class CalculatorConsole:
 
     def handle_memory_menu(self):
         while True:
-            print_menu(app_settings.console_color, memory_menu)
+            print_menu(manage_app_settings.console_color, memory_menu)
 
             option = self.consoleReader.input_data("Оберіть варіант меню")
 

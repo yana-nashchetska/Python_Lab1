@@ -1,4 +1,4 @@
-from functions.handle_input import write_to_output
+from UI.handle_input import write_to_output
 
 class ConsoleWriter:
     def output_value(self, value, message="Ваше значення"):

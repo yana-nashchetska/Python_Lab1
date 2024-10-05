@@ -1,4 +1,4 @@
-from classes.CalculatorConsole import CalculatorConsole
+from shared.classes.CalculatorConsole import CalculatorConsole
 
 def main():
     console = CalculatorConsole()

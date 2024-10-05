@@ -1,5 +1,5 @@
-from functions.handle_input import read_from_input
-from functions.validation_functions import check_color, check_number, check_operator
+from UI.handle_input import read_from_input
+from BLL.validation_functions import check_color, check_number, check_operator
 
 
 class ConsoleReader:

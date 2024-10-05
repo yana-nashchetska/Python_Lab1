@@ -1,5 +1,5 @@
-from constants.global_variables import Button, Color
-from functions.handle_input import write_to_output
+from shared.constants.global_variables import Button, Color
+from UI.handle_input import write_to_output
 
 
 def check_number(param):

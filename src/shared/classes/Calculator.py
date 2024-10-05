@@ -1,5 +1,5 @@
-import app_settings
-from constants.global_variables import Button, operations
+import BLL.manage_app_settings as manage_app_settings
+from shared.constants.global_variables import Button, operations
 
 
 class Calculator:
@@ -8,7 +8,7 @@ class Calculator:
         self.current_value = current_value
         self.memory = memory
         self.history = []
-        self.decimal_places = app_settings.decimal_places
+        self.decimal_places = manage_app_settings.decimal_places
 
     def validate_number(self, value):
         try:

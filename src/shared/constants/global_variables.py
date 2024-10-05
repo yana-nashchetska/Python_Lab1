@@ -1,5 +1,5 @@
 from enum import Enum
-from functions.operations_functions import (
+from BLL.operations_functions import (
     add,
     subtract,
     multiply,
